@@ -28,8 +28,6 @@ Docker's flexibility becomes crucial when the RAG data source originates from da
           * [Generated Docker Services](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#3-generated-docker-services)
           * [Downloading LLM](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#4-downloading-llm)
           * [Chatbot Application Testing](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#5-chatbot-application-testing)
-4.  [Contact](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#4-contact)
-
 
 
 ## Apache Spark
