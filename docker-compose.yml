@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  ollama:
+    build:
+      context: ./ollama
+      dockerfile: Dockerfile
+    container_name: chatbot-ollama-service
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models_data:/root/.ollama
+    restart: unless-stopped # <<< TAMBAHKAN BARIS INI
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: chatbot-backend-service
+    ports:
+      - "5000:5000"
+    depends_on:
+      - ollama
+    environment:
+      OLLAMA_MODEL_NAME: "deepseek-r1:1.5b"
+      OLLAMA_API_URL: "http://chatbot-ollama-service:11434/api/generate"
+    volumes:
+      - ./backend/:/app/
+    restart: unless-stopped # <<< TAMBAHKAN BARIS INI
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: chatbot-frontend-service
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend/:/usr/share/nginx/html:ro
+    restart: unless-stopped # <<< TAMBAHKAN BARIS INI
+
+# Definisi Named Volumes
+volumes:
+  ollama_models_data:
+    driver: local

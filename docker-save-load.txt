@@ -1,0 +1,17 @@
+command docker save 
+--------------------
+docker save -o app-chatbot-ollama.tar app-chatbot-ollama
+docker save -o app-chatbot-ollama-with-deepseek.tar app-chatbot-ollama-with-deepseek 
+docker save -o app-chatbot-frontend.tar app-chatbot-frontend
+docker save -o app-chatbot-backend.tar app-chatbot-backend
+
+command docker load
+--------------------
+docker load -i app-chatbot-ollama.tar
+docker load -i app-chatbot-frontend.tar
+docker load -i app-chatbot-backend.tar
+
+
+command change containet to image 
+-----------------------------------
+docker commit chatbot-ollama-service app-chatbot-ollama-with-deepseek:latest
