@@ -8,7 +8,7 @@ By encapsulating each application component—from locally loaded Large Language
 Docker's flexibility becomes crucial when the RAG data source originates from data processed or stored using **Apache Spark**. This seamless integration can be achieved without the need to locally install a large Spark environment on every target machine. Furthermore, Docker simplifies the distribution and caching of local images, reducing the repetitive need to download large data via limited internet connections. The ability to efficiently reconfigure and maintain applications makes complex AI deployment processes lighter and more manageable, even in resource-constrained environments.
 
 
-![Architecture Schema Deployment](./ss/skema.png)
+![Architecture Schema Deployment](./ss/skema.jpg)
 
 ![Chatbot Screenshot](./ss/ss-chatbot.jpg)
 
@@ -17,20 +17,18 @@ Docker's flexibility becomes crucial when the RAG data source originates from da
 
 ## Table of Contents
 
-1.  [Concept of ETL with Apache Spark](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#concept-of-etl-with-apache-spark)
-      * [Data Sources](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#data-sources)
-2.  [Apache Spark](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#apache-spark)
-3.  [AI Chatbot with RAG Using Apache Spark](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#ai-chatbot-with-rag-using-apache-spark)
-4.  [Deployment of AI Chatbot with RAG Using Apache Spark](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#deployment-of-ai-chatbot-with-rag-using-apache-spark)
-      * [Reasons for Deployment on Docker & Ollama](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#reasons-for-deployment-on-docker--ollama)
-      * [Project Structure](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#project-structure)
-      * [Deployment Steps](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#deployment-steps)
-          * [Docker-Compose](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#docker-compose)
-          * [Generated Docker Images](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#generated-docker-images)
-          * [Generated Docker Services](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#generated-docker-services)
-          * [Downloading LLM](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#downloading-llm)
-          * [Chatbot Application Testing](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#chatbot-application-testing)
-5.  [Contact](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#contact)
+1.  [Apache Spark](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#apache-spark)
+2.  [AI Chatbot with RAG Using Apache Spark](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#ai-chatbot-with-rag-using-apache-spark)
+3.  [Deployment of AI Chatbot with RAG Using Apache Spark](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#deployment-of-ai-chatbot-with-rag-using-apache-spark)
+      * [Reasons for Deployment on Docker & Ollama](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#1-reasons-for-deployment-on-docker--ollama)
+      * [Project Structure](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#2-project-structure)
+      * [Deployment Steps](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#3-deployment-steps)
+          * [Docker-Compose](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#1-docker-compose)
+          * [Generated Docker Images](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#2-generated-docker-images)
+          * [Generated Docker Services](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#3-generated-docker-services)
+          * [Downloading LLM](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#4-downloading-llm)
+          * [Chatbot Application Testing](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#5-chatbot-application-testing)
+4.  [Contact](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#4-contact)
 
 
 
@@ -50,7 +48,7 @@ Regarding how to create an AI Chatbot with RAG (Retrieval-Augmented Generation),
 
 
 
-### Deployment of AI Chatbot with RAG Using Apache Spark
+### 1. Deployment of AI Chatbot with RAG Using Apache Spark
 
 Docker is an open-source platform that enables developers to build, ship, and run applications in *containers*.
 
@@ -65,7 +63,7 @@ Imagine this:
 
 
 
-### Reasons for Deployment on Docker & Ollama
+### 2. Reasons for Deployment on Docker & Ollama
 
 Here are the reasons why deploying an AI RAG Chatbot with Apache Spark using Docker can be a highly effective alternative:
 
@@ -76,7 +74,7 @@ Here are the reasons why deploying an AI RAG Chatbot with Apache Spark using Doc
 
 
 
-### Project Structure
+### 3. Project Structure
 
 Here's the directory and file structure for our project:
 
@@ -107,7 +105,7 @@ AI-CHATBOOT-RAG-BIG-DATA-DOCKER/
 
 ### Deployment Steps
 
-#### Docker-Compose
+#### 1. Docker-Compose
 
 To run the deployment, simply execute the `docker-compose up -d` command, as it contains all the necessary configurations for the deployment process.
 
@@ -116,9 +114,7 @@ docker-compose up -d
 ```
 
 
-
-
-#### Generated Docker Images
+#### 2. Generated Docker Images
 
 Upon successful deployment, 3 Docker images will be created as shown in the screenshot below:
 
@@ -129,9 +125,7 @@ Upon successful deployment, 3 Docker images will be created as shown in the scre
 ![ss](./ss/docker-2.jpg)
 
 
-
-
-#### Generated Docker Services
+#### 3. Generated Docker Services
 
 After the deployment process is successful, 3 running Docker services will be established, as shown in this screenshot:
 
@@ -142,8 +136,7 @@ After the deployment process is successful, 3 running Docker services will be es
 ![ss](./ss/docker-4-2.jpg)
 
 
-
-#### Downloading LLM
+#### 4. Downloading LLM
 
 Within the `chatbot-ollama-service` container, perform the necessary LLM model download (`ollama pull`). As an example, we use the `deepseek-r1:1.5b` model.
 
