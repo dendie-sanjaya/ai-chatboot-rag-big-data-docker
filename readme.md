@@ -142,7 +142,7 @@ Within the `chatbot-ollama-service` container, perform the necessary LLM model d
 
 
 
-#### Chatbot Application Testing
+#### 5. Chatbot Application Testing
 
 Upon successful deployment and configuration, the chatbot application will appear as follows:
 
