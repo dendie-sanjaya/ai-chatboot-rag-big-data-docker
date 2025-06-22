@@ -103,7 +103,7 @@ AI-CHATBOOT-RAG-BIG-DATA-DOCKER/
 
 
 
-### Deployment Steps
+### 3. Deployment Steps
 
 #### 1. Docker-Compose
 
