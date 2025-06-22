@@ -1,6 +1,3 @@
-Baik, ini terjemahan ke Bahasa Inggris dari teks yang sudah disempurnakan:
-
------
 
 # Optimizing AI RAG Chatbot Deployment: Docker Solutions for Limited Resource Environments with External Apache Spark Data
 
@@ -10,22 +7,13 @@ By encapsulating each application component—from locally loaded Large Language
 
 Docker's flexibility becomes crucial when the RAG data source originates from data processed or stored using **Apache Spark**. This seamless integration can be achieved without the need to locally install a large Spark environment on every target machine. Furthermore, Docker simplifies the distribution and caching of local images, reducing the repetitive need to download large data via limited internet connections. The ability to efficiently reconfigure and maintain applications makes complex AI deployment processes lighter and more manageable, even in resource-constrained environments.
 
------
 
-**Suggestions for Media (Images and Videos):**
-
-I see you've included images and videos. This is excellent\! However, their placement could be more effective. You might consider placing them after the "Reasons for Deployment" section or in a dedicated "Demonstration" sub-section.
-
-```markdown
-![Architecture Schema](./ss/skema.png)
+![Architecture Schema Deployment](./ss/skema.png)
 
 ![Chatbot Screenshot](./ss/ss-chatbot.jpg)
 
 [Chatbot AI RAG Demo Video](./ss/video-demo.mp4)
-```
 
-
------
 
 ## Table of Contents
 
@@ -44,7 +32,7 @@ I see you've included images and videos. This is excellent\! However, their plac
           * [Chatbot Application Testing](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#chatbot-application-testing)
 5.  [Contact](https://github.com/dendie-sanjaya/ai-chatboot-rag-big-data-docker#contact)
 
------
+
 
 ## Apache Spark
 
@@ -52,7 +40,7 @@ Apache Spark is a highly popular and powerful open-source distributed data proce
 
 For more information on how to perform ETL using Apache Spark, you can refer to my GitHub repository at: [https://github.com/dendie-sanjaya/apache-spark-etl](https://github.com/dendie-sanjaya/apache-spark-etl)
 
------
+
 
 ## AI Chatbot with RAG Using Apache Spark
 
@@ -60,7 +48,7 @@ Regarding how to create an AI Chatbot with RAG (Retrieval-Augmented Generation),
 
 [https://github.com/dendie-sanjaya/ai-chatbot-big-data-apache-spark](https://github.com/dendie-sanjaya/ai-chatbot-big-data-apache-spark)
 
------
+
 
 ### Deployment of AI Chatbot with RAG Using Apache Spark
 
@@ -75,7 +63,7 @@ Imagine this:
       * This makes applications **portable**; the same container can be run in any environment with Docker, guaranteeing the application will behave consistently.
       * Docker also provides an easy way to manage these containers, such as creating, starting, stopping, and deleting them.
 
------
+
 
 ### Reasons for Deployment on Docker & Ollama
 
@@ -86,7 +74,7 @@ Here are the reasons why deploying an AI RAG Chatbot with Apache Spark using Doc
 3.  **Limited Internet Access:** If a server has a policy restricting internet access, Docker offers an alternative. We can prepare all necessary programs and dependencies in pre-packaged Docker *images*.
 4.  **Ollama for LLM:** Ollama is chosen for its ease in LLM AI deployment. This platform offers many LLM options already *hosted* in its repository and optimized to run on computers that do not require high specifications.
 
------
+
 
 ### Project Structure
 
@@ -115,7 +103,7 @@ AI-CHATBOOT-RAG-BIG-DATA-DOCKER/
 └── readme.md
 ```
 
------
+
 
 ### Deployment Steps
 
@@ -128,7 +116,7 @@ docker-compose up -d
 ```
 
 
------
+
 
 #### Generated Docker Images
 
@@ -141,7 +129,7 @@ Upon successful deployment, 3 Docker images will be created as shown in the scre
 ![ss](./ss/docker-2.jpg)
 
 
------
+
 
 #### Generated Docker Services
 
@@ -153,7 +141,7 @@ After the deployment process is successful, 3 running Docker services will be es
 
 ![ss](./ss/docker-4-2.jpg)
 
------
+
 
 #### Downloading LLM
 
@@ -161,16 +149,16 @@ Within the `chatbot-ollama-service` container, perform the necessary LLM model d
 
 ![ss](./ss/docker-5-1.jpg)
 
------
+
 
 #### Chatbot Application Testing
 
 Upon successful deployment and configuration, the chatbot application will appear as follows:
 
-![ss](./ss/6.jpg)
+![ss](./ss/ss-chatbot.jpg)
 
 
------
+
 
 ## Contact
 
